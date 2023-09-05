@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guess Random Number Challenge"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        android:textColor="#3F51B5"
+        />
+
+    <LinearLayout
+        android:id="@+id/in_lay"
+        android:layout_below="@id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/et_low"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="Enter Lower Number"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/et_high"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="Enter Higher Number"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="30dp"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Start Guessing"
+        android:layout_below="@id/in_lay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/gu_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_start"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_chances"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chances Left : 5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            android:textColor="#F44336"
+            />
+
+        <EditText
+            android:id="@+id/et_guess_number"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/tv_chances"
+            android:hint="Enter your guess"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/btn_guess"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Check"
+            android:layout_below="@id/et_guess_number"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#009688"
+            android:layout_marginTop="20dp"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
